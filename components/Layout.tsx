@@ -1,32 +1,27 @@
-import React, { ReactNode } from "react";
-import Link from "next/link";
+import { ReactNode } from "react";
 import Head from "next/head";
+import Header from "./Header/Header";
 
 type Props = {
   children?: ReactNode;
   title?: string;
 };
 
-const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <div>
+const Layout = ({ children, title = "Pioner" }: Props) => (
+  <>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap"
+        rel="stylesheet"
+      />
     </Head>
-    <header>
-      <nav>
-        <Link href="/">Home</Link> | <Link href="/about">About</Link> |{" "}
-        <Link href="/users">Users List</Link> |{" "}
-        <a href="/api/users">Users API</a>
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
+    <Header />
+    <main>{children}</main>
+    <footer>ФУТЕР</footer>
+  </>
 );
 
 export default Layout;
