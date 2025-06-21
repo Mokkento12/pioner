@@ -1,4 +1,5 @@
 import styles from "./Header.module.sass";
+import MainNav from "./MainNav";
 import TopBar from "./TopBar";
 
 const Header = () => {
@@ -6,6 +7,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.container}>
         <TopBar />
+        <MainNav />
       </div>
     </header>
   );

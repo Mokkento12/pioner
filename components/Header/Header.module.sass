@@ -1,4 +1,5 @@
 .header
+  margin-bottom: 80px
   background: #fff
 
 .topBar
@@ -6,13 +7,14 @@
   display: flex
   align-items: center
   justify-content: space-between
+  margin-bottom: 36px
 
 .container
   max-width: 1180px
   margin: 0 auto
   display: flex
   align-items: center
-  justify-content: space-between
+  flex-direction: column
 
 .contacts
   display: flex
@@ -43,3 +45,55 @@
 
 .contactLink:hover
   text-decoration-line: underline
+
+.mainNav
+  position: relative
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  column-gap: 72px
+
+.mainNav:before
+  content: ''
+  background: rgb(140, 132, 132)
+  position: absolute
+  width: 1180px
+  height: 1px
+  bottom: 35px
+
+.navList
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  list-style: none
+  margin: 0
+  padding: 0
+
+.navList a
+  text-decoration: none
+  color: rgb(51, 51, 51)
+  font-family: "Source Sans 3"
+  font-size: 16px
+  font-weight: 400
+  line-height: 120%
+  text-align: left
+
+.callButton
+  display: flex
+  align-items: center
+  justify-content: space-between
+  column-gap: 2px
+  border: none
+  background-color: inherit
+
+.callText
+  color: rgb(96, 124, 230)
+  font-family: Source Sans 3
+  font-size: 16px
+  font-weight: 400
+  line-height: 120%
+  text-align: left
+  text-transform: uppercase
+  white-space: nowrap
