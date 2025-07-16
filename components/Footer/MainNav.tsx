@@ -1,7 +1,7 @@
-import Link from "next/link";
 import styles from "./Footer.module.sass";
+import NavLinks from "../NavLinks/NavLinks";
 
-const navLinks = [
+const footerLinks = [
   { label: "Главная", href: "/" },
   { label: "О предприятии", href: "/about" },
   { label: "Новости", href: "/news" },
@@ -18,13 +18,12 @@ const navLinks = [
 const MainNav = () => {
   return (
     <nav className={styles.mainNav}>
-      <ul className={styles.navList}>
-        {navLinks.map(({ label, href }) => (
-          <li key={href}>
-            <Link href={href}>{label}</Link>
-          </li>
-        ))}
-      </ul>
+      <NavLinks
+        links={footerLinks}
+        classNameUl={styles.navList}
+        classNameLi={styles.navItem}
+        classNameLink={styles.navLink}
+      />
     </nav>
   );
 };
