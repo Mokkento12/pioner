@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { GET_CHARACTERS } from "../graphql/queries/characters";
 import Layout from "../components/Layout";
+import Todo from "../components/ToDo/ToDo";
 
 const AboutPage = () => {
   const { data, loading, error } = useQuery(GET_CHARACTERS);
@@ -38,6 +39,10 @@ const AboutPage = () => {
             <p>Статус: {char.status}</p>
           </div>
         ))}
+      </div>
+      {/* Todo-блок */}
+      <div>
+        <Todo />
       </div>
     </Layout>
   );
