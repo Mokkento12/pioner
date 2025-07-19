@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import { GET_CHARACTERS } from "../graphql/queries/characters";
 import Layout from "../components/Layout";
 import Todo from "../components/ToDo/ToDo";
+import Counter from "../components/Counter/Counter";
 
 const AboutPage = () => {
   const { data, loading, error } = useQuery(GET_CHARACTERS);
@@ -43,6 +44,7 @@ const AboutPage = () => {
       {/* Todo-блок */}
       <div>
         <Todo />
+        <Counter />
       </div>
     </Layout>
   );
