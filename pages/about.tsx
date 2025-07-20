@@ -3,6 +3,7 @@ import { GET_CHARACTERS } from "../graphql/queries/characters";
 import Layout from "../components/Layout";
 import Todo from "../components/ToDo/ToDo";
 import Counter from "../components/Counter/Counter";
+import UserCard from "../components/UserCard/UserCard";
 
 const AboutPage = () => {
   const { data, loading, error } = useQuery(GET_CHARACTERS);
@@ -45,6 +46,8 @@ const AboutPage = () => {
       <div>
         <Todo />
         <Counter />
+        <UserCard name="Alex" age={34} />
+        <UserCard name="Mary" age={25} />
       </div>
     </Layout>
   );
