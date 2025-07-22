@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(() => {
+    const saved = localStorage.getItem("count");
+    return saved ? Number(saved) : 0;
+  });
 
   useEffect(() => {
-    console.log(`Счетчик обновился: ${count}`);
+    localStorage.setItem("count", count.toString());
   }, [count]);
 
   const increment = () => setCount((prev) => prev + 1);

@@ -1,9 +1,10 @@
 import { useQuery } from "@apollo/client";
 import { GET_CHARACTERS } from "../graphql/queries/characters";
 import Layout from "../components/Layout";
-import Todo from "../components/ToDo/ToDo";
-import Counter from "../components/Counter/Counter";
-import UserCard from "../components/UserCard/UserCard";
+import Todo from "../components/features/ToDo/ToDo";
+import Counter from "../components/features/Counter/Counter";
+import UserCard from "../components/features/UserCard/UserCard";
+import ThemeSwitcher from "../components/features/ThemeSwitcher/ThemeSwitcher";
 
 const AboutPage = () => {
   const { data, loading, error } = useQuery(GET_CHARACTERS);
@@ -48,6 +49,7 @@ const AboutPage = () => {
         <Counter />
         <UserCard name="Alex" age={34} />
         <UserCard name="Mary" age={25} />
+        <ThemeSwitcher />
       </div>
     </Layout>
   );

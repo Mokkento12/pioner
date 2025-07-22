@@ -1,7 +1,11 @@
 // components/Todo.tsx
 import React, { useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../hooks/useRedux";
-import { addTodo, toggleTodo, deleteTodo } from "../../store/slices/todoSlice";
+import { useAppDispatch, useAppSelector } from "../../../hooks/useRedux";
+import {
+  addTodo,
+  toggleTodo,
+  deleteTodo,
+} from "../../../store/slices/todoSlice";
 
 const Todo: React.FC = () => {
   const [text, setText] = useState("");
