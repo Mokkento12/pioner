@@ -5,6 +5,7 @@ import Todo from "../components/features/ToDo/ToDo";
 import Counter from "../components/features/Counter/Counter";
 import UserCard from "../components/features/UserCard/UserCard";
 import ThemeSwitcher from "../components/features/ThemeSwitcher/ThemeSwitcher";
+import Timer from "../components/features/Timer/Timer";
 
 const AboutPage = () => {
   const { data, loading, error } = useQuery(GET_CHARACTERS);
@@ -43,13 +44,14 @@ const AboutPage = () => {
           </div>
         ))}
       </div>
-      {/* Todo-блок */}
+
       <div>
         <Todo />
         <Counter />
         <UserCard name="Alex" age={34} />
         <UserCard name="Mary" age={25} />
         <ThemeSwitcher />
+        <Timer />
       </div>
     </Layout>
   );
