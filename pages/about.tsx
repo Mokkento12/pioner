@@ -6,6 +6,7 @@ import Counter from "../components/features/Counter/Counter";
 import UserCard from "../components/features/UserCard/UserCard";
 import ThemeSwitcher from "../components/features/ThemeSwitcher/ThemeSwitcher";
 import Timer from "../components/features/Timer/Timer";
+import NetworkStatus from "../components/features/NetworkStatus/NetworkStatus";
 
 const AboutPage = () => {
   const { data, loading, error } = useQuery(GET_CHARACTERS);
@@ -52,6 +53,7 @@ const AboutPage = () => {
         <UserCard name="Mary" age={25} />
         <ThemeSwitcher />
         <Timer />
+        <NetworkStatus />
       </div>
     </Layout>
   );
