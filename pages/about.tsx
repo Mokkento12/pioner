@@ -7,6 +7,8 @@ import UserCard from "../components/features/UserCard/UserCard";
 import ThemeSwitcher from "../components/features/ThemeSwitcher/ThemeSwitcher";
 import Timer from "../components/features/Timer/Timer";
 import NetworkStatus from "../components/features/NetworkStatus/NetworkStatus";
+import RandomUser from "../components/features/RandomUser/RandomUser";
+import LoginForm from "../components/features/Form/Form";
 
 const AboutPage = () => {
   const { data, loading, error } = useQuery(GET_CHARACTERS);
@@ -54,6 +56,8 @@ const AboutPage = () => {
         <ThemeSwitcher />
         <Timer />
         <NetworkStatus />
+        <RandomUser />
+        <LoginForm />
       </div>
     </Layout>
   );
