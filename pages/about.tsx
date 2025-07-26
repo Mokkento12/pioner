@@ -9,6 +9,7 @@ import Timer from "../components/features/Timer/Timer";
 import NetworkStatus from "../components/features/NetworkStatus/NetworkStatus";
 import RandomUser from "../components/features/RandomUser/RandomUser";
 import LoginForm from "../components/features/Form/Form";
+import ClickCounter from "../components/features/ClickCounter/ClickCounter";
 
 const AboutPage = () => {
   const { data, loading, error } = useQuery(GET_CHARACTERS);
@@ -58,6 +59,7 @@ const AboutPage = () => {
         <NetworkStatus />
         <RandomUser />
         <LoginForm />
+        <ClickCounter />
       </div>
     </Layout>
   );
