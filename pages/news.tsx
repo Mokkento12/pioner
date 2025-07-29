@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_CHARACTERS } from "../graphql/queries/news";
 import Layout from "../components/Layout";
 import ThemeToggle from "../components/features/ThemeToggle/ThemeToggle";
+import LikesCounter from "../components/features/LikesCounter/LikesCounter";
 
 const NewsPage = () => {
   const [page, setPage] = useState(1);
@@ -65,6 +66,7 @@ const NewsPage = () => {
         </button>
       </div>
       <ThemeToggle />
+      <LikesCounter />
     </Layout>
   );
 };
