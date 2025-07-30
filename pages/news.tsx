@@ -4,6 +4,8 @@ import { GET_CHARACTERS } from "../graphql/queries/news";
 import Layout from "../components/Layout";
 import ThemeToggle from "../components/features/ThemeToggle/ThemeToggle";
 import LikesCounter from "../components/features/LikesCounter/LikesCounter";
+import StockManager from "../components/features/StockManager/StockManager";
+import VotePanel from "../components/features/votePanel/votePanel";
 
 const NewsPage = () => {
   const [page, setPage] = useState(1);
@@ -67,6 +69,8 @@ const NewsPage = () => {
       </div>
       <ThemeToggle />
       <LikesCounter />
+      <StockManager />
+      <VotePanel />
     </Layout>
   );
 };
