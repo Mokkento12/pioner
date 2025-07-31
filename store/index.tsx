@@ -4,6 +4,7 @@ import themeReducer from "./slices/theme/themeSlice";
 import likesReducer from "./likes/likesSlice";
 import stockReducer from "./stock/stockSlice";
 import voteReducer from "./vote/voteSlice";
+import playerReducer from "./player/playerSlice";
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
     likes: likesReducer,
     stock: stockReducer,
     vote: voteReducer,
+    player: playerReducer,
   },
 });
 

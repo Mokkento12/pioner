@@ -6,6 +6,7 @@ import ThemeToggle from "../components/features/ThemeToggle/ThemeToggle";
 import LikesCounter from "../components/features/LikesCounter/LikesCounter";
 import StockManager from "../components/features/StockManager/StockManager";
 import VotePanel from "../components/features/votePanel/votePanel";
+import AudioPlayer from "../components/features/AudioPlayer/AudioPlayer";
 
 const NewsPage = () => {
   const [page, setPage] = useState(1);
@@ -71,6 +72,7 @@ const NewsPage = () => {
       <LikesCounter />
       <StockManager />
       <VotePanel />
+      <AudioPlayer />
     </Layout>
   );
 };
